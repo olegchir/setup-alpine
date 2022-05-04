@@ -239,8 +239,6 @@ $APK fetch \
 	--root . \
 	--no-progress \
 	--stdout \
-	--keys-dir "$SCRIPT_DIR"/keys \
-	--no-cache \
 	alpine-base \
 	| unpack_apk etc
 
