@@ -16,6 +16,7 @@ jobs:
       - uses: jirutka/setup-alpine@v1
         with:
           branch: v3.15
+          extra-repositories: http://apk.bell-sw.com/main
 
       - run: cat /etc/alpine-release
         shell: alpine.sh {0}
