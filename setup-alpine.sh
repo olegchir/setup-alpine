@@ -228,6 +228,7 @@ $APK add \
 	--no-progress \
 	--update-cache \
 	--arch "$INPUT_ARCH" \
+	--keys-dir "$SCRIPT_DIR"/keys \
 	$ALPINE_BASE_PKGS
 
 # This package contains /etc/os-release, /etc/alpine-release and /etc/issue,
@@ -237,6 +238,7 @@ $APK fetch \
 	--root . \
 	--no-progress \
 	--stdout \
+	--keys-dir "$SCRIPT_DIR"/keys \
 	alpine-base \
 	| unpack_apk etc
 
