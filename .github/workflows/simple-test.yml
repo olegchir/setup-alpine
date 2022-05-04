@@ -15,6 +15,7 @@ jobs:
     steps:
       - uses: jirutka/setup-alpine@v1
         with:
+          key: 123
           branch: v3.15
           extra-repositories: http://apk.bell-sw.com/main
 
