@@ -20,3 +20,6 @@ jobs:
 
       - run: cat /etc/alpine-release
         shell: alpine.sh {0}
+        
+      - run: ls -al /etc/apk/keys
+        shell: alpine.sh {0}        
