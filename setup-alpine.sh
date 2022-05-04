@@ -215,9 +215,11 @@ printf '%s\n' \
 	$INPUT_EXTRA_REPOSITORIES \
 	| tee etc/apk/repositories
 
-ls -al "$SCRIPT_DIR"/keys
 cp -r "$SCRIPT_DIR"/keys etc/apk/
 cat /etc/resolv.conf > etc/resolv.conf
+
+info 'Listing existing keys:'
+ls -al "$SCRIPT_DIR"/keys
 
 info "Installing base packages into $(pwd)"
 $APK add \
