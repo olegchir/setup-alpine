@@ -13,7 +13,7 @@ jobs:
   show_release:
     runs-on: ubuntu-latest
     steps:
-      - uses: jirutka/setup-alpine@master
+      - uses: olegchir/setup-alpine@master
         with:
           branch: v3.15
           extra-repositories: http://apk.bell-sw.com/main
