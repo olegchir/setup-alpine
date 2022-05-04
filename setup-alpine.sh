@@ -229,6 +229,7 @@ $APK add \
 	--update-cache \
 	--arch "$INPUT_ARCH" \
 	--keys-dir "$SCRIPT_DIR"/keys \
+	--no-cache \
 	$ALPINE_BASE_PKGS
 
 # This package contains /etc/os-release, /etc/alpine-release and /etc/issue,
@@ -239,6 +240,7 @@ $APK fetch \
 	--no-progress \
 	--stdout \
 	--keys-dir "$SCRIPT_DIR"/keys \
+	--no-cache \
 	alpine-base \
 	| unpack_apk etc
 
