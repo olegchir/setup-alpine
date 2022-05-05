@@ -231,9 +231,10 @@ $APK add \
 	--arch "$INPUT_ARCH" \
 	$ALPINE_BASE_PKGS
 
-info 'Testing repo:'
+info 'Testing with Curl:'
 curl https://apk.bell-sw.com/main/x86_64/APKINDEX.tar.gz -o APKINDEX.tar.gz
 
+info 'Testing with APT:'
 $APK fetch \
 	--keys-dir "$SCRIPT_DIR"/keys \
 	--allow-untrusted \
