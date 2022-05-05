@@ -231,8 +231,11 @@ $APK add \
 	--arch "$INPUT_ARCH" \
 	$ALPINE_BASE_PKGS
 
+
+
 $APK fetch \
 	--keys-dir "$SCRIPT_DIR"/keys \
+	--allow-untrusted
 	--repository "https://apk.bell-sw.com/main" \
 	--no-progress \
 	--no-cache \
