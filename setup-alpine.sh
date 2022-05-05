@@ -234,9 +234,12 @@ $APK add \
 info 'Testing with Curl:'
 curl https://apk.bell-sw.com/main/x86_64/APKINDEX.tar.gz -o APKINDEX.tar.gz
 
-info 'Testing with APT:'
+info 'Preparing APT:'
 
-$APK update
+$APK update \
+	--root . \
+
+info 'Testing with APT:'
 
 $APK fetch \
 	--keys-dir "$SCRIPT_DIR"/keys \
