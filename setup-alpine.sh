@@ -235,7 +235,7 @@ $APK add \
 
 $APK fetch \
 	--keys-dir "$SCRIPT_DIR"/keys \
-	--allow-untrusted
+	--allow-untrusted \
 	--repository "https://apk.bell-sw.com/main" \
 	--no-progress \
 	--no-cache \
