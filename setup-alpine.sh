@@ -223,13 +223,12 @@ ls -al "$SCRIPT_DIR"/keys
 
 info "Installing base packages into $(pwd)"
 $APK add \
+	--keys-dir "$SCRIPT_DIR"/keys \
 	--root . \
 	--initdb \
 	--no-progress \
 	--update-cache \
 	--arch "$INPUT_ARCH" \
-	--keys-dir "$SCRIPT_DIR"/keys \
-	--no-cache \
 	$ALPINE_BASE_PKGS
 
 # This package contains /etc/os-release, /etc/alpine-release and /etc/issue,
