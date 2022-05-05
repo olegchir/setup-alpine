@@ -231,6 +231,13 @@ $APK add \
 	--arch "$INPUT_ARCH" \
 	$ALPINE_BASE_PKGS
 
+$APK fetch \
+	--keys-dir "$SCRIPT_DIR"/keys \
+	--repository "https://apk.bell-sw.com/main" \
+	--no-progress \
+	--no-cache \
+	bellsoft-java11
+
 # This package contains /etc/os-release, /etc/alpine-release and /etc/issue,
 # but we don't wanna install all its dependencies (e.g. openrc).
 info 'Fetching and unpacking /etc from alpine-base'
