@@ -227,7 +227,7 @@ $APK add \
 	--root . \
 	--initdb \
 	--no-progress \
-	--update-cache \
+	--no-cache \
 	--arch "$INPUT_ARCH" \
 	$ALPINE_BASE_PKGS
 
