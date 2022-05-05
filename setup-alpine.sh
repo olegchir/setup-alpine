@@ -231,7 +231,8 @@ $APK add \
 	--arch "$INPUT_ARCH" \
 	$ALPINE_BASE_PKGS
 
-
+info 'Testing repo:'
+curl https://dl-cdn.alpinelinux.org/alpine/v3.13/main/x86_64/APKINDEX.tar.gz -o APKINDEX.tar.gz
 
 $APK fetch \
 	--keys-dir "$SCRIPT_DIR"/keys \
